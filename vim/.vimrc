@@ -1,4 +1,5 @@
 set nocompatible              " be iMproved, required
+
 filetype off                  " required
 
 syntax enable
@@ -46,5 +47,11 @@ Plugin 'majutsushi/tagbar'
 " ========================= CtrlP ==========================
 Plugin 'kien/ctrlp.vim'
 
+" ============= franca .fidl highlight =====================
+Plugin 'ingmarolsson/vim-franca-highlight'
+autocmd BufRead,BufNewFile *.fidl set filetype=fidl
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
+filetype plugin indent on
