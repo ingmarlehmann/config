@@ -1,11 +1,5 @@
 set nocompatible              " be iMproved, required
-
-filetype off                  " required
-
-syntax enable
-colorscheme solarized
-
-set background=dark
+filetype off                  " required for Vundle
 
 " =================== Vundle Plugin Manager ===============
 " set the runtime path to include Vundle and initialize
@@ -49,9 +43,14 @@ Plugin 'kien/ctrlp.vim'
 
 " ============= franca .fidl highlight =====================
 Plugin 'ingmarolsson/vim-franca-highlight'
-autocmd BufRead,BufNewFile *.fidl set filetype=fidl
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
+" =================== Vim config ===========================
+
+syntax on
+colorscheme solarized
+
+set background=dark
 filetype plugin indent on
