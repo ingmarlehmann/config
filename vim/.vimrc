@@ -47,6 +47,12 @@ Plugin 'ingmarlehmann/vim-franca-highlight'
 " =============== vim-airline status bar ===================
 Plugin 'bling/vim-airline'
 
+" ===================== VimProc ============================
+Plugin 'Shougo/vimproc.vim'
+
+" ==================== Vebugger ============================
+Plugin 'idanarye/vim-vebugger'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
