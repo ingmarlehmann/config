@@ -41,8 +41,11 @@ Plugin 'majutsushi/tagbar'
 " ========================= CtrlP ==========================
 Plugin 'kien/ctrlp.vim'
 
-" ============= franca .fidl highlight =====================
-Plugin 'ingmarolsson/vim-franca-highlight'
+" ============== franca .fidl highlight ====================
+Plugin 'ingmarlehmann/vim-franca-highlight'
+
+" =============== vim-airline status bar ===================
+Plugin 'bling/vim-airline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
