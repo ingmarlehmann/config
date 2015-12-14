@@ -73,5 +73,6 @@ syntax on
 colorscheme solarized
 
 set background=dark
+set incsearch
 filetype plugin indent on
 let g:vebugger_leader='\'
