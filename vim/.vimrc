@@ -53,6 +53,9 @@ Plugin 'Shougo/vimproc.vim'
 " ==================== Vebugger ============================
 Plugin 'idanarye/vim-vebugger'
 
+" ===================== Vim ags ============================
+Plugin 'rking/ag.vim'
+
 " ==================== Syntastic ===========================
 Plugin 'scrooloose/syntastic'
 set statusline+=%#warningmsg#
@@ -89,3 +92,16 @@ set softtabstop=4
 
 filetype plugin indent on
 let g:vebugger_leader='\'
+
+" Disable arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP> 
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+" Disable hjkl keys
+noremap h <NOP>
+noremap j <NOP>
+noremap k <NOP>
+noremap l <NOP>
+
