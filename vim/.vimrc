@@ -70,6 +70,12 @@ let g:syntastic_check_on_wq = 0
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
+" ================ Rust autocomplete (racer) ===============
+Plugin 'racer-rust/vim-racer'
+set hidden
+let g:racer_cmd = "/home/ingmar/.cargo/bin/racer"
+let $RUST_SRC_PATH="/home/ingmar/development/projects/sandbox/rust-test"
+
 " =================== Vim config ===========================
 
 syntax on
@@ -81,13 +87,13 @@ filetype plugin indent on
 let g:vebugger_leader='\'
 
 " Disable arrow keys
-noremap <Up> <NOP>
-noremap <Down> <NOP> 
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+"noremap <Up> <NOP>
+"noremap <Down> <NOP> 
+"noremap <Left> <NOP>
+"noremap <Right> <NOP>
 
 " Disable hjkl keys
-noremap h <NOP>
-noremap j <NOP>
-noremap k <NOP>
-noremap l <NOP>
+"noremap h <NOP>
+"noremap j <NOP>
+"noremap k <NOP>
+"noremap l <NOP>
