@@ -83,6 +83,22 @@ colorscheme solarized
 
 set background=dark
 set incsearch
+set wildmenu
+set wildmode=full
+
+set autoindent
+set expandtab
+
+" size of a hard tabstop
+set tabstop=4
+"
+" size of an "indent"
+set shiftwidth=4
+"
+" a combination of spaces and tabs are used to simulate tab stops at a width
+" other than the (hard)tabstop
+set softtabstop=4
+
 filetype plugin indent on
 let g:vebugger_leader='\'
 
