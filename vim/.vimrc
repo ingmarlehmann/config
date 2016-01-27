@@ -80,6 +80,9 @@ set incsearch
 set wildmenu
 set wildmode=full
 
+set autoindent
+set expandtab
+
 " size of a hard tabstop
 set tabstop=4
 "
