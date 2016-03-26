@@ -56,6 +56,9 @@ Plugin 'idanarye/vim-vebugger'
 " ===================== Vim ags ============================
 Plugin 'rking/ag.vim'
 
+" =================== NERD comment =========================
+Plugin 'scrooloose/nerdcommenter'
+
 " ==================== Syntastic ===========================
 Plugin 'scrooloose/syntastic'
 set statusline+=%#warningmsg#
@@ -71,10 +74,10 @@ let g:syntastic_check_on_wq = 0
 call vundle#end()            " required
 
 " ================ Rust autocomplete (racer) ===============
-Plugin 'racer-rust/vim-racer'
-set hidden
-let g:racer_cmd = "/home/ingmar/.cargo/bin/racer"
-let $RUST_SRC_PATH="/home/ingmar/development/projects/sandbox/rust-test"
+"Plugin 'racer-rust/vim-racer'
+"set hidden
+"let g:racer_cmd = "/home/ingmar/.cargo/bin/racer"
+"let $RUST_SRC_PATH="/home/ingmar/development/projects/sandbox/rust-test"
 
 " =================== Vim config ===========================
 
@@ -98,6 +101,9 @@ set shiftwidth=4
 " a combination of spaces and tabs are used to simulate tab stops at a width
 " other than the (hard)tabstop
 set softtabstop=4
+
+" let me backspace out what i want please
+set backspace=indent,eol,start
 
 filetype plugin indent on
 let g:vebugger_leader='\'
