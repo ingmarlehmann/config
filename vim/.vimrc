@@ -29,11 +29,21 @@ Plugin 'tpope/vim-fugitive'
 " ==================== Solarized color theme ===============
 Plugin 'altercation/vim-colors-solarized'
 
-" ====================== YouCompleteMe =====================
-Plugin 'Valloric/YouCompleteMe'
+"" ====================== YouCompleteMe =====================
+"Plugin 'Valloric/YouCompleteMe'
+
+"" where to search for .ycm_extra_conf.py if not found
+"let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'  
+"let g:ycm_confirm_extra_conf = 1
+"let g:ycm_register_as_syntastic_checker = 1 "default 1
 
 " ====================== Clang-format ======================
 Plugin 'rhysd/vim-clang-format'
+
+" ===================== clang_complete =====================
+Plugin 'Rip-Rip/clang_complete'
+let g:clang_snippets = 1
+let g:clang_user_options = '-std=c++11'
 
 " ========================= Tagbar =========================
 Plugin 'majutsushi/tagbar'
@@ -60,15 +70,20 @@ Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdcommenter'
 
 " ==================== Syntastic ===========================
-Plugin 'scrooloose/syntastic'
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"Plugin 'scrooloose/syntastic'
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_disabled_filetypes=['h', 'hpp', 'c', 'cpp', 'cxx', 'cc']
+
+" use compilation databases
+"let g:syntastic_cpp_clang_check_post_args = ""
+"
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
