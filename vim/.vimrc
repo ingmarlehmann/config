@@ -1,3 +1,4 @@
+autocmd!
 set nocompatible              " be iMproved, required
 filetype off                  " required for Vundle
 
@@ -48,6 +49,14 @@ let g:clang_user_options = '-std=c++11'
 " ========================= Tagbar =========================
 Plugin 'majutsushi/tagbar'
 
+" Open tagbar automatically when starting vim with a supported
+" file type
+au VimEnter * nested :call tagbar#autoopen(1)
+
+" Open tagbar automatically when opening a supported file type
+" from within vim
+au FileType * nested :call tagbar#autoopen(0)
+
 " ========================= CtrlP ==========================
 Plugin 'kien/ctrlp.vim'
 
@@ -70,23 +79,25 @@ Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdcommenter'
 
 " ==================== Syntastic ===========================
-"Plugin 'scrooloose/syntastic'
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
+Plugin 'scrooloose/syntastic'
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-"let g:syntastic_disabled_filetypes=['h', 'hpp', 'c', 'cpp', 'cxx', 'cc']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_cpp_compiler_options = '-std=c++11'
+
+"let g:syntastic_mode_map = {
+    "\ "mode": "active",
+    "\ "active_filetypes": [],
+    "\ "passive_filetypes": ["c", "cpp"] }
 
 " use compilation databases
 "let g:syntastic_cpp_clang_check_post_args = ""
 "
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
 
 " ================ Rust autocomplete (racer) ===============
 "Plugin 'racer-rust/vim-racer'
@@ -94,9 +105,13 @@ call vundle#end()            " required
 "let g:racer_cmd = "/home/ingmar/.cargo/bin/racer"
 "let $RUST_SRC_PATH="/home/ingmar/development/projects/sandbox/rust-test"
 
-" =================== Vim config ===========================
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
 
-syntax on
+" =================== Vim config ===========================
+filetype plugin indent on
+syntax enable
+
 colorscheme solarized
 
 set background=dark
@@ -120,7 +135,6 @@ set softtabstop=4
 " let me backspace out what i want please
 set backspace=indent,eol,start
 
-filetype plugin indent on
 let g:vebugger_leader='\'
 
 " Disable arrow keys
