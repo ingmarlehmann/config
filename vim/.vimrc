@@ -31,31 +31,40 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'altercation/vim-colors-solarized'
 
 "" ====================== YouCompleteMe =====================
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
-"" where to search for .ycm_extra_conf.py if not found
-"let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'  
-"let g:ycm_confirm_extra_conf = 1
-"let g:ycm_register_as_syntastic_checker = 1 "default 1
+" where to search for .ycm_extra_conf.py if not found
+let g:ycm_global_ycm_extra_conf = '/home/ingmar/.ycm_extra_conf.py'  
+let g:ycm_confirm_extra_conf = 1
+let g:ycm_register_as_syntastic_checker = 1 "default 1
+
+" ======================= Ultisnips ========================
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<C-W>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+" ======================== Supertab ========================
+Plugin 'ervandew/supertab'
 
 " ====================== Clang-format ======================
 Plugin 'rhysd/vim-clang-format'
 
 " ===================== clang_complete =====================
-Plugin 'Rip-Rip/clang_complete'
-let g:clang_snippets = 1
-let g:clang_user_options = '-std=c++11'
+"Plugin 'Rip-Rip/clang_complete'
+"let g:clang_snippets = 1
+"let g:clang_user_options = '-std=c++11'
 
 " ========================= Tagbar =========================
 Plugin 'majutsushi/tagbar'
-
-" Open tagbar automatically when starting vim with a supported
-" file type
-au VimEnter * nested :call tagbar#autoopen(1)
-
-" Open tagbar automatically when opening a supported file type
-" from within vim
-au FileType * nested :call tagbar#autoopen(0)
 
 " ========================= CtrlP ==========================
 Plugin 'kien/ctrlp.vim'
