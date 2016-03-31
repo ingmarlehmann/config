@@ -54,7 +54,12 @@ plugins=(git jira repo urltools wd)
 # User configuration
 
   export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/ingmar/.local/bin:/home/ingmar/.cargo/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
+
+  # export MANPATH="/usr/local/man:$MANPATH"
+
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
 source $ZSH/oh-my-zsh.sh
 

@@ -24,13 +24,22 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Open NERDTree with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>
 
+" ======================== auto pairs ======================
+Plugin 'jiangmiao/auto-pairs'
+
+" ===================== a.vim: h/cpp switch ================
+Plugin 'vim-scripts/a.vim'
+
 " ===================== Fugitive Git plugin ================
 Plugin 'tpope/vim-fugitive'
 
 " ==================== Solarized color theme ===============
 Plugin 'altercation/vim-colors-solarized'
 
-"" ====================== YouCompleteMe =====================
+" ========== Color coded: C/C++ syntax highlighting ========
+Plugin 'jeaye/color_coded'
+
+"" ===================== YouCompleteMe =====================
 Plugin 'Valloric/YouCompleteMe'
 
 " where to search for .ycm_extra_conf.py if not found
@@ -46,8 +55,8 @@ Plugin 'honza/vim-snippets'
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<C-W>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
