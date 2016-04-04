@@ -24,6 +24,21 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Open NERDTree with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>
 
+" ======================= hacker news ======================
+Plugin 'ryanss/vim-hackernews'
+
+" ======================= vim surround ======================
+Plugin 'tpope/vim-surround'
+
+" ======================= easy align  ======================
+Plugin 'junegunn/vim-easy-align'
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 " ======================== auto pairs ======================
 Plugin 'jiangmiao/auto-pairs'
 
