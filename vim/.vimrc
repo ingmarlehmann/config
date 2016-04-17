@@ -13,21 +13,19 @@ Plugin 'VundleVim/Vundle.vim'
 " ========================= NERDTree =======================
 Plugin 'scrooloose/nerdtree'
 
-" Open NERDTree automatically if no filename
-" was specified when launching vim
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
 " Close vim if the only remaining window is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Open NERDTree with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>
 
+" ======================= vim-cmake ========================
+Plugin 'vhdirk/vim-cmake'
+
 " ======================= hacker news ======================
 Plugin 'ryanss/vim-hackernews'
 
-" ======================= vim surround ======================
+" ======================= vim surround =====================
 Plugin 'tpope/vim-surround'
 
 " ======================= easy align  ======================
