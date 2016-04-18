@@ -19,8 +19,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Open NERDTree with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>
 
-" ======================= vim-cmake ========================
-Plugin 'vhdirk/vim-cmake'
+" ======================= vim-bitbake ======================
+Plugin 'kergoth/vim-bitbake'
 
 " ======================= hacker news ======================
 Plugin 'ryanss/vim-hackernews'
@@ -50,7 +50,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'altercation/vim-colors-solarized'
 
 " ========== Color coded: C/C++ syntax highlighting ========
-Plugin 'jeaye/color_coded'
+"Plugin 'jeaye/color_coded'
 
 "" ===================== YouCompleteMe =====================
 Plugin 'Valloric/YouCompleteMe'
@@ -73,6 +73,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+" ======================== vim-cmake ========================
+Plugin 'vhdirk/vim-cmake'
 
 " ======================== Supertab ========================
 Plugin 'ervandew/supertab'
