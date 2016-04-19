@@ -105,6 +105,7 @@ Plugin 'Shougo/vimproc.vim'
 
 " ==================== Vebugger ============================
 Plugin 'idanarye/vim-vebugger'
+let g:vebugger_leader='\'
 
 " ===================== Vim ags ============================
 Plugin 'rking/ag.vim'
@@ -163,6 +164,7 @@ syntax enable
 
 colorscheme solarized
 
+set ruler
 set background=dark
 set incsearch
 set wildmenu
@@ -183,8 +185,6 @@ set softtabstop=4
 
 " let me backspace out what i want please
 set backspace=indent,eol,start
-
-let g:vebugger_leader='\'
 
 " Disable arrow keys
 "noremap <Up> <NOP>
