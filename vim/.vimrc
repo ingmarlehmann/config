@@ -2,6 +2,13 @@ autocmd!
 set nocompatible              " be iMproved, required
 filetype off                  " required for Vundle
 
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+
+nmap <C-V> "+gP
+imap <C-V><ESC><C-V>i
+vmap <C-C> "+y
 " =================== Vundle Plugin Manager ===============
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -47,7 +54,10 @@ Plugin 'vim-scripts/a.vim'
 Plugin 'tpope/vim-fugitive'
 
 " ==================== Solarized color theme ===============
-Plugin 'altercation/vim-colors-solarized'
+"Plugin 'altercation/vim-colors-solarized'
+
+" ==================== nord color theme ===============
+Plugin 'arcticicestudio/nord-vim'
 
 " ========== Color coded: C/C++ syntax highlighting ========
 "Plugin 'jeaye/color_coded'
@@ -162,7 +172,7 @@ call vundle#end()            " required
 filetype plugin indent on
 syntax enable
 
-colorscheme solarized
+colorscheme nord
 
 set ruler
 set background=dark
