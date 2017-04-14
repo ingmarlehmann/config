@@ -452,6 +452,9 @@ awful.rules.rules = {
      }
     },
 
+    { rule = { class = "Firefox" },
+        properties = { screen = 1, tag = "2" }    
+    },
     -- Floating clients.
     { rule_any = {
         instance = {
@@ -556,4 +559,7 @@ end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
--- }}}
+
+awful.util.spawn("firefox")
+awful.util.spawn("nm-applet")
+awful.util.spawn_with_shell("~/.config/awesome/autorun.sh")-- }}}
