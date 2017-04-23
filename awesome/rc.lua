@@ -10,6 +10,8 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
+local battery_widget = require("battery-widget")
+
 -- Enable VIM help for hotkeys widget when client with matching name is opened:
 require("awful.hotkeys_popup.keys.vim")
 
@@ -44,7 +46,7 @@ beautiful.init(awful.util.get_themes_dir() .. "zenburn/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "/usr/sbin/urxvt"
-editor = os.getenv("EDITOR") or "nano"
+editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -118,6 +120,8 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
+
+battery = battery_widget({adapter = "BAT0"})
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -218,6 +222,7 @@ awful.screen.connect_for_each_screen(function(s)
             mykeyboardlayout,
             wibox.widget.systray(),
             mytextclock,
+            battery,
             s.mylayoutbox,
         },
     }
@@ -562,4 +567,5 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 awful.util.spawn("firefox")
 awful.util.spawn("nm-applet")
+awful.util.spawn("urxvt")
 awful.util.spawn_with_shell("~/.config/awesome/autorun.sh")-- }}}
