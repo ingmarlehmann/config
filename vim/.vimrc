@@ -2,10 +2,6 @@ autocmd!
 set nocompatible              " be iMproved, required
 filetype off                  " required for Vundle
 
-set guioptions-=m
-set guioptions-=T
-set guioptions-=r
-
 " =================== Vundle Plugin Manager ===============
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -24,7 +20,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 map <C-n> :NERDTreeToggle<CR>
 
 " ======================= vim-bitbake ======================
-Plugin 'kergoth/vim-bitbake'
+"Plugin 'kergoth/vim-bitbake'
 
 " ======================= hacker news ======================
 Plugin 'ryanss/vim-hackernews'
@@ -48,19 +44,19 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'vim-scripts/a.vim'
 
 " ===================== Fugitive Git plugin ================
-Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-fugitive'
 
 " ==================== Solarized color theme ===============
 "Plugin 'altercation/vim-colors-solarized'
 
 " ==================== nord color theme ===============
-Plugin 'arcticicestudio/nord-vim'
+"Plugin 'arcticicestudio/nord-vim'
 
 " ========== Color coded: C/C++ syntax highlighting ========
 "Plugin 'jeaye/color_coded'
 
 "" ===================== YouCompleteMe =====================
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 
 " where to search for .ycm_extra_conf.py if not found
 let g:ycm_global_ycm_extra_conf = '/home/ingmar/.ycm_extra_conf.py'  
@@ -91,9 +87,9 @@ Plugin 'ervandew/supertab'
 Plugin 'rhysd/vim-clang-format'
 
 " ===================== clang_complete =====================
-"Plugin 'Rip-Rip/clang_complete'
-"let g:clang_snippets = 1
-"let g:clang_user_options = '-std=c++11'
+Plugin 'Rip-Rip/clang_complete'
+let g:clang_snippets = 1
+let g:clang_user_options = '-std=c++11'
 
 " ========================= Tagbar =========================
 Plugin 'majutsushi/tagbar'
@@ -102,17 +98,17 @@ Plugin 'majutsushi/tagbar'
 Plugin 'kien/ctrlp.vim'
 
 " ============== franca .fidl highlight ====================
-Plugin 'ingmarlehmann/vim-franca-highlight'
+"Plugin 'ingmarlehmann/vim-franca-highlight'
 
 " =============== vim-airline status bar ===================
 Plugin 'bling/vim-airline'
 
 " ===================== VimProc ============================
-Plugin 'Shougo/vimproc.vim'
+"Plugin 'Shougo/vimproc.vim'
 
 " ==================== Vebugger ============================
-Plugin 'idanarye/vim-vebugger'
-let g:vebugger_leader='\'
+"Plugin 'idanarye/vim-vebugger'
+"let g:vebugger_leader='\'
 
 " ===================== Vim ags ============================
 Plugin 'rking/ag.vim'
@@ -169,7 +165,7 @@ call vundle#end()            " required
 filetype plugin indent on
 syntax enable
 
-colorscheme nord
+colorscheme solarized8_dark
 
 set ruler
 set background=dark
@@ -180,7 +176,7 @@ set wildmode=full
 set autoindent
 set expandtab
 
-" size of a hard tabstop
+" siz of a hard tabstop
 set tabstop=4
 "
 " size of an "indent"
