@@ -42,7 +42,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(awful.util.get_themes_dir() .. "zenburn/theme.lua")
+beautiful.init(awful.util.get_themes_dir() .. "xresources/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "/usr/sbin/urxvt"
@@ -565,7 +565,4 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
-awful.util.spawn("firefox")
-awful.util.spawn("nm-applet")
-awful.util.spawn("urxvt")
 awful.util.spawn_with_shell("~/.config/awesome/autorun.sh")-- }}}

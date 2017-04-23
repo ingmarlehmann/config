@@ -10,4 +10,7 @@ function run {
 }
 
 run xscreensaver -no-splash
-run /usr/local/bin/pasystray
+run pasystray
+run urxvt
+run firefox
+run nm-applet
