@@ -2,7 +2,7 @@
 # Xft settings
 ##############
 
-Xft.dpi:                    221
+Xft.dpi:                    210
 Xft.antialias:              true
 Xft.rgba:                   rgb
 Xft.hinting:                true
@@ -84,8 +84,8 @@ URxvt*foreground: S_base00
 URxvt*background: S_base03
 
 # Bitstream Vera Linux font
-URxvt*font: xft:Bitstream Vera Sans Mono:Roman:size=11
-URxvt*boldFont: xft:Bitstream Vera Sans Mono:Bold:size=11
+#URxvt*font: xft:Bitstream Vera Sans Mono:Roman:size=11
+#URxvt*boldFont: xft:Bitstream Vera Sans Mono:Bold:size=11
 URxvt*letterSpace: -1
 
 # scrollbar - true (default) or false

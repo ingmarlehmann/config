@@ -11,6 +11,6 @@ function run {
 
 run xscreensaver -no-splash
 run pasystray
-run urxvt
+run termite
 run firefox
 run nm-applet

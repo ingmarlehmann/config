@@ -42,10 +42,10 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(awful.util.get_themes_dir() .. "xresources/theme.lua")
+beautiful.init(awful.util.get_themes_dir() .. "zenburn/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "/usr/sbin/urxvt"
+terminal = "termite"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -335,7 +335,18 @@ globalkeys = gears.table.join(
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+              {description = "show the menubar", group = "launcher"}),
+    -- Monitor brightness
+    awful.key({ }, "XF86MonBrightnessDown", function ()
+    	awful.util.spawn("xbacklight -dec 15") end),
+    awful.key({ }, "XF86MonBrightnessUp", function ()
+    	awful.util.spawn("xbacklight -inc 15") end),
+    awful.key({ }, "XF86AudioRaiseVolume", function ()
+    	awful.util.spawn("pactl set-sink-mute 0 false; pactl set-sink-volume 0 +5%") end),
+    awful.key({ }, "XF86AudioLowerVolume", function ()
+    	awful.util.spawn("pactl set-sink-mute 0 false; pactl set-sink-volume 0 -5%") end),
+    awful.key({ }, "XF86AudioMute", function ()
+    	awful.util.spawn("pactl set-sink-mute 0 toggle") end)
 )
 
 clientkeys = gears.table.join(
@@ -475,6 +486,7 @@ awful.rules.rules = {
           "Wpa_gui",
           "pinentry",
           "veromix",
+	  "Pavucontrol",
           "xtightvncviewer"},
 
         name = {
