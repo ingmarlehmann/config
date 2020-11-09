@@ -40,7 +40,6 @@ set wildmenu
 set wildmode=full
 set nowrap
 set laststatus=2
-set statusline=%=%m\ %c\ %P\ %f\
 
 set autoindent
 set expandtab

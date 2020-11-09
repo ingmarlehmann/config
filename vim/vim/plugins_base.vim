@@ -1,17 +1,11 @@
-" ========================= NERDTree =======================
-"Plugin 'scrooloose/nerdtree'
+" ========================= dirsettings  =======================
+Plugin 'chazy/dirsettings'
 
-" Close vim if the only remaining window is NERDTree
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" ========================= vimwiki  =======================
+Plugin 'vimwiki/vimwiki'
 
-" Open NERDTree with Ctrl+n
-"map <C-n> :NERDTreeToggle<CR>
-
-" ======================= vim-bitbake ======================
-"Plugin 'kergoth/vim-bitbake'
-
-" ======================= hacker news ======================
-Plugin 'ryanss/vim-hackernews'
+" ========================= lightline =======================
+Plugin 'itchyny/lightline.vim'
 
 " ======================= vim surround =====================
 Plugin 'tpope/vim-surround'
@@ -25,25 +19,10 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-" ======================== auto pairs ======================
-"Plugin 'jiangmiao/auto-pairs'
-
-" ===================== a.vim: h/cpp switch ================
-Plugin 'vim-scripts/a.vim'
-
 " ===================== Fugitive Git plugin ================
-"Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 
-" ==================== Solarized color theme ===============
-"Plugin 'altercation/vim-colors-solarized'
-
-" ==================== nord color theme ===============
-"Plugin 'arcticicestudio/nord-vim'
-
-" ========== Color coded: C/C++ syntax highlighting ========
-"Plugin 'jeaye/color_coded'
-
-"" ===================== YouCompleteMe =====================
+" ===================== YouCompleteMe =====================
 Plugin 'Valloric/YouCompleteMe'
 
 " where to search for .ycm_extra_conf.py if not found
@@ -65,38 +44,14 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
-" ======================== vim-cmake ========================
-Plugin 'vhdirk/vim-cmake'
-
 " ======================== Supertab ========================
 Plugin 'ervandew/supertab'
-
-" ====================== Clang-format ======================
-Plugin 'rhysd/vim-clang-format'
-
-" ===================== clang_complete =====================
-Plugin 'Rip-Rip/clang_complete'
-let g:clang_snippets = 1
-let g:clang_user_options = '-std=c++11'
 
 " ========================= Tagbar =========================
 Plugin 'majutsushi/tagbar'
 
 " ========================= CtrlP ==========================
 Plugin 'kien/ctrlp.vim'
-
-" ============== franca .fidl highlight ====================
-"Plugin 'ingmarlehmann/vim-franca-highlight'
-
-" =============== vim-airline status bar ===================
-"Plugin 'bling/vim-airline'
-
-" ===================== VimProc ============================
-"Plugin 'Shougo/vimproc.vim'
-
-" ==================== Vebugger ============================
-"Plugin 'idanarye/vim-vebugger'
-"let g:vebugger_leader='\'
 
 " ===================== Vim ags ============================
 Plugin 'rking/ag.vim'
@@ -139,9 +94,3 @@ let g:syntastic_cpp_compiler_options = '-std=c++11'
 " use compilation databases
 "let g:syntastic_cpp_clang_check_post_args = ""
 "
-
-" ================ Rust autocomplete (racer) ===============
-Plugin 'racer-rust/vim-racer'
-set hidden
-let g:racer_cmd = "/home/ingmar/.cargo/bin/racer"
-"let $RUST_SRC_PATH="/home/ingmar/development/projects/sandbox/rust-test"
